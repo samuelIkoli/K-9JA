@@ -1,0 +1,48 @@
+<% layout('layouts/boilerplate')%>
+
+    <div class="container mx-auto text-center d-flex align-items-center">
+        <div class="row container container-fluid mx-auto">
+            <div class="col-md-4 container">
+                <img src="/imgs/l1.jpeg" class="img-fluid mb-4" alt="">
+            </div>
+            <div class="col-md-4 align-items-center d-flex container">
+                <div class="container  align-items-center">
+                    <h3 style="color: #EA1C2C;">This is the homepage of <br> K-9JA. </h3>
+                    <h5 style="color: #EA1C2C;">A home business by Ikoli Samuel, started while he was in school because
+                        of
+                        his love for dogs and
+                        he
+                        needed funds tbh. LOL. Mostly for the love of dogs though. He's always had dogs since he was
+                        born.
+                        Literally grew up with them</h5>
+                </div>
+            </div>
+            <div class="col-md-4 container">
+                <img src="/imgs/l2.jpeg" class="img-fluid" alt="">
+            </div>
+            <div class="col-md-4 container">
+                <img src="/imgs/p2.jpeg" class="img-fluid" alt="">
+            </div>
+            <div class="col-md-4 container">
+                <img src="/imgs/k.jpg" class="img-fluid" alt="">
+            </div>
+            <div class="col-md-4 container">
+                <img src="/imgs/p3.jpeg" class="img-fluid" alt="">
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script>
+        $(function () {
+            $(document).scroll(function () {
+                var $nav = $("#mainNavbar");
+                $nav.toggleClass("scrolled", $(this).scrollTop() > $nav.height());
+            });
+        });
+    </script>
+    </body>
+
+    </html>

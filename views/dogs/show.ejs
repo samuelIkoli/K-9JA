@@ -1,0 +1,74 @@
+<% layout('layouts/boilerplate')%>
+
+
+    <section class="container-fluid px-0">
+        <div class="row align-items-center content">
+            <div class="col-md-6 order-2 order-md-1">
+                <img src="<%=dog.images[0].url%>" alt="" class="img-fluid">
+            </div>
+            <div class="col-md-6 text-center order-1 order-md-2">
+                <div class="row justify-content-center">
+                    <div class="col-10 col-lg-8 blurb mb-5 mb-md-0">
+                        <h2>
+                            <%=dog.name%>
+                        </h2>
+                        <br>
+                        <p class="lead">
+                            <%=dog.description[0]%>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row align-items-center content">
+            <div class="col-md-6 text-center">
+                <div class="row justify-content-center">
+                    <div class="col-10 col-lg-8 blurb mb-5 mb-md-0">
+                        <h2>
+                            <%=dog.name%>
+                        </h2>
+                        <br>
+                        <p class="lead">
+                            <%=dog.description[1]%>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <img src="<%=dog.images[1].url%>" alt="" class="img-fluid">
+            </div>
+        </div>
+        <div class="row align-items-center content">
+            <div class="col-md-6 order-2 order-md-1">
+                <img src="<%=dog.images[2].url%>" alt="" class="img-fluid">
+            </div>
+            <div class="col-md-6 text-center order-1 order-md-2">
+                <div class="row justify-content-center">
+                    <div class="col-10 col-lg-8 blurb mb-5 mb-md-0">
+                        <h2>
+                            <%=dog.name%>
+                        </h2>
+                        <br>
+                        <p class="lead">
+                            <%=dog.description[2]%>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+
+    <script>
+        $(function () {
+            $(document).scroll(function () {
+                var $nav = $("#mainNavbar");
+                $nav.toggleClass("scrolled", $(this).scrollTop() > $nav.height());
+            });
+        });
+    </script>
+    </body>
+
+    </html>

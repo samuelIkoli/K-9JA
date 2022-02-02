@@ -1,0 +1,33 @@
+<% layout('layouts/boilerplate')%>
+
+
+    <h1>Abuja Cane Corsos</h1>
+ 
+    <ul>
+        <% for (let dog of dogs) { %>
+            <div class="card mb-3">
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="https://res.cloudinary.com/dwjtu9ags/image/upload/v1639078492/scub29gf6mb4ok45pm45.jpg" alt="" class="img-fluid h-100 w-100">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h2 class="card-title">
+                                <%=dog.name%>
+                            </h2 class="card-title">
+                            <h5>
+                                <%=dog.description%>
+                            </h5>
+                            <a href="" class="btn btn-primary">View <%=dog.name%>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        <%}%>
+    </ul>
+
+    </body>
+
+    </html>
