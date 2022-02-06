@@ -1,7 +1,7 @@
 const Dog = require('../models/dog');
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost:27017/dog', {
+mongoose.connect('mongodb+srv://Samuel:Layefanimi07@samcluster0.ezatj.mongodb.net/Doggybase?retryWrites=true&w=majority', {
     useNewUrlParser: true,
     useUnifiedTopology: true
 });

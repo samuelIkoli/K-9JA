@@ -32,7 +32,7 @@ const Dog = require('./models/dog');
 // const methodOverride = require('method-override');
 
 
-const dbUrl = 'mongodb://localhost:27017/dog';
+const dbUrl = process.env.DB_URL || 'mongodb://localhost:27017/dog';
 
 // const dogRoutes = require('./routes/dogs');
 
