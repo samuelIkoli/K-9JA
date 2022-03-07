@@ -6,7 +6,7 @@
             <div class="card mb-5 border border-5 border-dark">
                 <div class="row">
                     <div class="col-md-4 ">
-                        <img src="<%=dog?.images[0]?.url%>" alt="" class="img-fluid img-thumbnail h-100 w-auto">
+                        <img src="<%=dog?.images[0]?.url%>" id="imgsize" alt="" class="img-fluid img-thumbnail">
                     </div>
                     <div class="col-md-8  container container-fluid">
                         <div class="card-body">
@@ -21,13 +21,14 @@
                                 <a href="/all/<%=dog.id%>" class="btn mt-3 btn-primary">View <%=dog.name%></a>
                             </div>
                         </div>
-    
-                        
+
+
                     </div>
                 </div>
             </div>
 
-        <%}%>
+            <%}%>
     </ul>
-</body>
-</html>
+    </body>
+
+    </html>
