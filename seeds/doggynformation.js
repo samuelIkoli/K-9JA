@@ -1,7 +1,9 @@
 const Dog = require('../models/dog');
 const mongoose = require('mongoose');
+require("dotenv").config();
 
-mongoose.connect('mongodb+srv://Samuel:Layefanimi07@samcluster0.ezatj.mongodb.net/Doggybase?retryWrites=true&w=majority', {
+
+mongoose.connect(process.env.DB_URL, {
     useNewUrlParser: true,
     useUnifiedTopology: true
 });
