@@ -1,8 +1,9 @@
-require('dotenv').config();
-
 const express = require('express');
 const { v4 } = require('uuid');
 const path = require('path');
+
+const dotenv = require('dotenv')
+dotenv.config();
 
 const mongoose = require('mongoose');
 const ejsMate = require('ejs-mate');
@@ -27,9 +28,6 @@ app.engine('ejs', ejsMate);
 app.set('view engine', 'ejs');
 // app.set('views', path.join(__dirname, 'views'));
 
-app.use(express.static(path.join(__dirname, 'views')));
-app.set('views', path.join(__dirname, 'views'));
-
 app.use(function (req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
     res.header("Access-Control-Allow-Methods", "GET, PUT, POST");
@@ -37,6 +35,8 @@ app.use(function (req, res, next) {
     next();
 });
 
+app.use(express.static(path.join(__dirname, 'views')));
+app.set('views', path.join(__dirname, 'views'));
 
 const store = MongoStore.create({
     mongoUrl: dbUrl,
