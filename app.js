@@ -51,9 +51,12 @@ store.on("error", function (e) {
 
 
 app.get('/', (req, res) => {
-    res.render('home')
+    res.send('k9ja')
 })
 
+app.get('/home', (req, res) => {
+    res.render('home')
+})
 
 app.get('/all', async (req, res) => {
     const dogs = await Dog.find({});
