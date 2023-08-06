@@ -10,7 +10,7 @@ body {
 }
 
 .blurb p {
-    color: #f498b8;
+    color: #e0618e;
     font-weight: 100;
     font-size: 1.125rem;
     line-height: 2;
@@ -27,7 +27,7 @@ body {
 }
 
 #mainNavbar .nav-link {
-    color: #add8e6;
+    color: #0a5974;
 }
 
 #mainNavbar .nav-link:hover {
