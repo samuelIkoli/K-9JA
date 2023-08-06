@@ -24,10 +24,6 @@ db.once("open", () => {
 });
 const app = express();
 
-app.engine('ejs', ejsMate);
-app.set('view engine', 'ejs');
-// app.set('views', path.join(__dirname, 'views'));
-
 app.use(function (req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
     res.header("Access-Control-Allow-Methods", "GET, PUT, POST");
@@ -40,6 +36,10 @@ app.use(express.json());
 
 app.use(express.static(path.join(__dirname, 'views')));
 app.set('views', path.join(__dirname, 'views'));
+
+app.engine('ejs', ejsMate);
+app.set('view engine', 'ejs');
+// app.set('views', path.join(__dirname, 'views'));
 
 const store = MongoStore.create({
     mongoUrl: dbUrl,
