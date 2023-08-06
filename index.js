@@ -35,9 +35,11 @@ app.use(function (req, res, next) {
     next();
 });
 
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+
 app.use(express.static(path.join(__dirname, 'views')));
 app.set('views', path.join(__dirname, 'views'));
-app.use(express.urlencoded({ extended: true }));
 
 const store = MongoStore.create({
     mongoUrl: dbUrl,
