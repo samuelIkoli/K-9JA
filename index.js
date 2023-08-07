@@ -50,12 +50,7 @@ store.on("error", function (e) {
     console.log("store error", e)
 })
 
-
 app.get('/', (req, res) => {
-    res.send('k9ja')
-})
-
-app.get('/home', (req, res) => {
     res.render('home')
 })
 
